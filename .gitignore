@@ -1,0 +1,18 @@
+# ide files
+.idea
+
+# Logs
+logs
+*.log
+
+# Dependency directory
+node_modules
+
+# local env variables
+.env
+
+package-lock.json
+
+.eslintrc
+
+
