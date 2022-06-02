@@ -1,0 +1,22 @@
+{
+  "name": "noticeboard_expressjs",
+  "version": "1.0.0",
+  "description": "api for adding notice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SibirianNomad/noticeboard_expressjs.git"
+  },
+  "author": "Eugene",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SibirianNomad/noticeboard_expressjs/issues"
+  },
+  "homepage": "https://github.com/SibirianNomad/noticeboard_expressjs#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
