@@ -4,10 +4,6 @@ const bcrypt = require('bcryptjs');
 const authService = require('../services/authService');
 
 class UserController {
-    get(req, res) {
-        return res.json({value: "get"});
-    }
-
     async registration(req, res) {
         try {
             const errors = validationResult(req)
@@ -58,7 +54,8 @@ class UserController {
             if (!validPassword) {
                 return res.status(400).json({message: `Wrong password`})
             }
-            const token = authService.generateAccessToken(user.id)
+           
+            const token = authService.generateAccessToken(user[0].id)
 
             return res.json({token})
         } catch (e) {
@@ -67,15 +64,6 @@ class UserController {
         }
     }
 
-    update(req, res) {
-        try {
-            return res.json({value: "update"});
-        } catch (e) {
-            console.log(e)
-            res.status(400).json({message: 'Error update'})
-        }
-
-    }
 
 }
 

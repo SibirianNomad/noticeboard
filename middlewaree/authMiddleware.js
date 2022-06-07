@@ -8,7 +8,7 @@ module.exports = function () {
             if (!token) {
                 return res.status(403).json({message: "User is unauthorized"})
             }
-           
+
             const decodedData = jwt.verify(token, config.server.jwt_secret)
             req.user = decodedData
             next()

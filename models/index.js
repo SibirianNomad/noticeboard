@@ -10,8 +10,17 @@ sequelize = new Sequelize(config.db.db_name, config.db.db_user, config.db.db_pas
 })
 
 const User = require('./user')(sequelize, Sequelize);
+const Notice = require('./notice')(sequelize, Sequelize);
+
+User.hasMany(Notice, {
+    foreignKey: 'userId'
+});
+Notice.belongsTo(User, {
+    foreignKey: 'id'
+});
 
 module.exports = {
     sequelize: sequelize,
-    user: User
+    user: User,
+    notice: Notice
 }
